@@ -9,15 +9,13 @@ class TestRaisedButton extends Component {
 
     window.raisedButton = {
       label: 'Test Me!!',
-      update: () => this.forceUpdate()
+      refresh: () => this.forceUpdate()
     };
 
     this.onClick = this.onClick.bind(this);
   }
 
-  onClick() {
-    window.raisedButton.clicked = true;
-  }
+  onClick = () => window.raisedButton.clicked = true;
 
   render() {
     return (

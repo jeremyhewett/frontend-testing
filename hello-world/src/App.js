@@ -7,6 +7,7 @@ injectTapEventPlugin();
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
 import TestRaisedButton from './testRaisedButton';
+import TestSelectField from './testSelectField';
 
 class App extends Component {
 
@@ -21,7 +22,12 @@ class App extends Component {
           <p className="App-intro">
             To get started, edit <code>src/App.js</code> and save to reload.
           </p>
-          <TestRaisedButton/>
+          <div>
+            <TestRaisedButton/>
+          </div>
+          <div>
+            <TestSelectField/>
+          </div>
         </div>
       </MuiThemeProvider>
     );
