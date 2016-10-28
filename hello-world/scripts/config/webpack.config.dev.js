@@ -57,7 +57,8 @@ module.exports = {
     // We ship a few polyfills by default:
     require.resolve('./polyfills'),
     // Finally, this is your app's code:
-    paths.appIndexJs
+    paths.appIndexJs,
+    './node_modules/jquery/dist/jquery.min.js'
     // We include the app code last so that if there is a runtime error during
     // initialization, it doesn't blow up the WebpackDevServer client, and
     // changing JS code would still trigger a refresh.
@@ -107,7 +108,15 @@ module.exports = {
       {
         test: /\.(js|jsx)$/,
         loader: 'eslint',
-        include: paths.appSrc,
+        include: paths.appSrc
+      },
+      {
+        // Script Loader
+        // Reference: https://github.com/webpack/script-loader
+        //
+        // Execute files once in global context
+        test: /min.js$/,
+        loader: 'script'
       }
     ],
     loaders: [

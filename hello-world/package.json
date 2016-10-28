@@ -2,6 +2,11 @@
   "name": "hello-world",
   "version": "0.1.0",
   "private": true,
+  "scripts": {
+    "prepublish": "node ./node_modules/selenium-standalone/bin/selenium-standalone install",
+    "start": "node ./scripts/start",
+    "test": "./node_modules/.bin/wdio scripts/config/wdio.conf.js"
+  },
   "devDependencies": {
     "autoprefixer": "v6.5.1",
     "babel-core": "v6.18.0",
@@ -21,12 +26,17 @@
     "file-loader": "v0.9.0",
     "find-cache-dir": "v0.1.1",
     "html-webpack-plugin": "v2.24.0",
+    "jquery": "^3.1.1",
     "material-ui": "v0.16.1",
     "object-assign": "v4.1.0",
     "postcss-loader": "v1.0.0",
     "promise": "v7.1.1",
     "react-dev-utils": "v0.3.0",
+    "script-loader": "^0.7.0",
+    "selenium-standalone": "^5.8.0",
     "style-loader": "v0.13.1",
+    "wdio-jasmine-framework": "^0.2.8",
+    "webdriverio": "^4.2.16",
     "webpack": "v1.13.3",
     "webpack-dev-server": "v1.16.2",
     "whatwg-fetch": "v1.0.0"
@@ -35,8 +45,7 @@
     "react": "v15.3.2",
     "react-dom": "v15.3.2"
   },
-  "scripts": {
-    "start": "node ./scripts/start",
-    "test": "react-scripts test --env=jsdom"
+  "browser": {
+    "jquery": "./node_modules/jquery/dist/jquery.min.js"
   }
 }

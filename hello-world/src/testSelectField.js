@@ -14,15 +14,19 @@ class TestSelectField extends Component {
         { label: 'No', value: false },
         { label: 'Yes', value: true }
       ],
+      value: null,
       refresh: () => this.forceUpdate()
     };
   }
 
-  handleChange = (event, index, value) => window.selectField.value = value;
+  handleChange = (event, index, value) => {
+    window.selectField.value = value;
+    this.setState({value});
+  };
 
   render() {
     return (
-      <SelectField floatingLabelText="Ready?" value={window.selectField.value} onChange={this.handleChange}>
+      <SelectField value={window.selectField.value} onChange={this.handleChange} id="test-select-field">
         {
           window.selectField.options.map(function(option, i) {
             return <MenuItem value={option.value} primaryText={option.label} key={i}/>;
