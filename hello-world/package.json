@@ -29,6 +29,7 @@
     "jquery": "^3.1.1",
     "material-ui": "v0.16.1",
     "object-assign": "v4.1.0",
+    "parse-color": "^1.0.0",
     "postcss-loader": "v1.0.0",
     "promise": "v7.1.1",
     "react-dev-utils": "v0.3.0",

@@ -1,9 +1,14 @@
 'use strict';
 
 let App = require('../app.pageObject');
+let customMatchers = require('../customMatchers');
 let raisedButton = require('./raisedButton.pageObject');
 
 describe('raisedButton', function() {
+
+  beforeEach(() => {
+    jasmine.addMatchers(customMatchers);
+  });
 
   beforeAll(() => {
     App.load();
@@ -13,8 +18,8 @@ describe('raisedButton', function() {
     expect(raisedButton.element.isVisible()).toEqual(true);
   });
 
-  it('should be the right color', function() {
-    expect(raisedButton.backgroundColor).toEqual('rgba(255,255,255,1)');
+  it('should have white background', function() {
+    expect(raisedButton.backgroundColor).toEqualColor('white');
   });
 
   describe('when is primary', () => {
@@ -23,8 +28,8 @@ describe('raisedButton', function() {
       raisedButton.isPrimary = true;
     });
 
-    it('should be the right color', function() {
-      expect(raisedButton.backgroundColor).toEqual('rgba(0,188,212,1)');
+    it('should have blue background', function() {
+      expect(raisedButton.backgroundColor).toEqualColor('rgb(0,188,212)');
     });
 
   });
