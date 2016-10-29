@@ -7,7 +7,7 @@ exports.config = {
   ],
   capabilities: [{
     browserName: 'chrome',
-    maxInstances: 1
+    maxInstances: 2
   }],
   coloredLogs: true,
   baseUrl: 'http://localhost:3000',
