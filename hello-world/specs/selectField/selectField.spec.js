@@ -17,15 +17,18 @@ describe('selectField', function() {
     expect(selectField.displayedValue).toEqual('');
   });
 
-  describe('and a value is selected', () => {
+  describe('when a value is selected', () => {
 
     beforeAll(() => {
       selectField.storedValue = 'null';
+      selectField.selectItem(1);
     });
 
-    it('update the value', function() {
-      selectField.selectItem(1);
+    it('should update the displayed value', function() {
       expect(selectField.displayedValue).toEqual('Yes');
+    });
+
+    it('should call onChange with the new value', function() {
       expect(selectField.storedValue).toEqual(true);
     });
 

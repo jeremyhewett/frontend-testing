@@ -9,6 +9,7 @@ class TestRaisedButton extends Component {
 
     window.raisedButton = {
       label: 'Test Me!!',
+      primary: false,
       refresh: () => this.forceUpdate()
     };
 
@@ -19,7 +20,7 @@ class TestRaisedButton extends Component {
 
   render() {
     return (
-      <RaisedButton label={window.raisedButton.label} secondary={true} onClick={this.onClick} />
+      <RaisedButton label={window.raisedButton.label} primary={window.raisedButton.primary} onClick={this.onClick} id="test-raised-button"/>
     );
   }
 }
