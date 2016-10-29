@@ -3,14 +3,15 @@ var seleniumServer;
 
 exports.config = {
   specs: [
-    './specs/**'
+    './specs/**/*.spec.js'
   ],
   capabilities: [{
-    browserName: 'chrome'
+    browserName: 'chrome',
+    maxInstances: 1
   }],
   coloredLogs: true,
   baseUrl: 'http://localhost:3000',
-  waitforTimeout: 1000,
+  waitforTimeout: 5000,
   framework: 'jasmine',
   reporters: ['dot'],
   onPrepare: function() {
