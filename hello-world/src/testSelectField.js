@@ -11,8 +11,8 @@ class TestSelectField extends Component {
     window.selectField = {
       options: [
         { label: '', value: null },
-        { label: 'No', value: false },
-        { label: 'Yes', value: true }
+        { label: 'Yes', value: true },
+        { label: 'No', value: false }
       ],
       value: null,
       refresh: () => this.forceUpdate()
