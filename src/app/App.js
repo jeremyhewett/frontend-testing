@@ -6,7 +6,7 @@ import injectTapEventPlugin from 'react-tap-event-plugin';
 injectTapEventPlugin();
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
-import TestRaisedButton from './testRaisedButton';
+import TestAclButton from './testAclButton';
 import TestSelectField from './testSelectField';
 
 class App extends Component {
@@ -15,15 +15,15 @@ class App extends Component {
     return (
       <MuiThemeProvider>
         <div className="App">
-          <div className="App-header">
+          <div className="App-header" style={{marginBottom: '100px'}}>
             <img src={logo} className="App-logo" alt="logo" />
             <h2 id="heading">React Components</h2>
           </div>
           <div>
-            <h4>Raised Button</h4>
-            <TestRaisedButton/>
+            <h4>ACL Button</h4>
+            <TestAclButton/>
           </div>
-          <div>
+          <div style={{marginTop: '100px'}}>
             <h4>Select Field</h4>
             <TestSelectField/>
           </div>

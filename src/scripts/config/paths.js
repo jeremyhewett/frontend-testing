@@ -40,10 +40,9 @@ module.exports = {
   appBuild: resolveApp('build'),
   appPublic: resolveApp('public'),
   appHtml: resolveApp('public/index.html'),
-  appIndexJs: resolveApp('src/index.js'),
+  appIndexJs: resolveApp('app/index.js'),
   appPackageJson: resolveApp('package.json'),
-  appSrc: resolveApp('src'),
-  testsSetup: resolveApp('src/setupTests.js'),
+  appSrc: resolveApp('app'),
   appNodeModules: resolveApp('node_modules'),
   ownNodeModules: resolveApp('node_modules'),
   nodePaths: nodePaths
@@ -59,10 +58,9 @@ module.exports = {
   appBuild: resolveApp('build'),
   appPublic: resolveApp('public'),
   appHtml: resolveApp('public/index.html'),
-  appIndexJs: resolveApp('src/index.js'),
+  appIndexJs: resolveApp('app/index.js'),
   appPackageJson: resolveApp('package.json'),
-  appSrc: resolveApp('src'),
-  testsSetup: resolveApp('src/setupTests.js'),
+  appSrc: resolveApp('app'),
   appNodeModules: resolveApp('node_modules'),
   // this is empty with npm3 but node resolution searches higher anyway:
   ownNodeModules: resolveOwn('../node_modules'),
@@ -71,6 +69,7 @@ module.exports = {
 // @remove-on-eject-end
 
 // config before publish: we're in ./packages/react-scripts/config/
+/*
 if (__dirname.indexOf(path.join('packages', 'react-scripts', 'config')) !== -1) {
   module.exports = {
     appBuild: resolveOwn('../../../build'),
@@ -85,3 +84,4 @@ if (__dirname.indexOf(path.join('packages', 'react-scripts', 'config')) !== -1) 
     nodePaths: nodePaths
   };
 }
+*/

@@ -1,29 +1,39 @@
 'use strict';
 
-class RaisedButton {
+class AclButton {
 
   get element() {
-    return browser.element('#test-raised-button');
+    return browser.element('#test-acl-button');
+  }
+
+  get title() {
+    return this.element.getText();
+  }
+
+  set title(value) {
+    browser.execute(`window.aclButton.title = '${value}'`);
+    browser.execute(`window.aclButton.refresh()`);
+    browser.pause(500);
   }
 
   get wasClicked() {
-    return browser.execute(`return window.raisedButton.clicked`).value;
+    return browser.execute(`return window.aclButton.wasClicked`).value;
   }
 
   set wasClicked(value) {
-    browser.execute(`window.raisedButton.clicked = ${value}`);
+    browser.execute(`window.aclButton.wasClicked = ${value}`);
   }
 
   get backgroundColor() {
     return this.element.getCssProperty('background-color').value;
   }
 
-  set isPrimary(value) {
-    browser.execute(`window.raisedButton.primary = ${value}`);
-    browser.execute(`window.raisedButton.refresh()`);
+  set type(type) {
+    browser.execute(`window.aclButton.type = '${type}'`);
+    browser.execute(`window.aclButton.refresh()`);
     browser.pause(500);
   }
 
 }
 
-module.exports = new RaisedButton();
+module.exports = new AclButton();

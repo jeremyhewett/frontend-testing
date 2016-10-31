@@ -13,7 +13,7 @@ module.exports = {
           pass: util.equals(actualColor.rgba, expectedColor.rgba, customEqualityTesters)
         };
         if (!result.pass) {
-          result.message = `Expected ${actual} ( ${actualColor} ) + to equal ${expected} ( ${expectedColor} )`;
+          result.message = `Expected ${actual} ( ${actualColor.rgba} ) + to equal ${expected} ( ${expectedColor.rgba} )`;
         }
         return result;
       }

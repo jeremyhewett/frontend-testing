@@ -2,34 +2,64 @@
 
 let App = require('../app.pageObject');
 let customMatchers = require('../customMatchers');
-let raisedButton = require('./raisedButton.pageObject');
+let constants = require('../constants');
 
-describe('raisedButton', function() {
+let aclButton = require('./aclButton.pageObject');
 
-  beforeEach(() => {
-    jasmine.addMatchers(customMatchers);
-  });
+describe('aclButton', function() {
 
   beforeAll(() => {
     App.load();
   });
 
-  it('should be visible', function() {
-    expect(raisedButton.element.isVisible()).toEqual(true);
+  beforeEach(() => {
+    jasmine.addMatchers(customMatchers);
   });
 
-  it('should have white background', function() {
-    expect(raisedButton.backgroundColor).toEqualColor('white');
+  it('should be visible', function() {
+    expect(aclButton.element.isVisible()).toEqual(true);
+  });
+
+  it('should have grey background', function() {
+    expect(aclButton.backgroundColor).toEqualColor(constants.aclGrey);
+  });
+
+  it('should have title "Acl Button"', function() {
+    expect(aclButton.title).toEqual('Test Me!!');
+  });
+
+  describe('when title is changed', () => {
+
+    beforeAll(() => {
+      aclButton.title = 'Acl Button';
+    });
+
+    it('should display new title', () => {
+      expect(aclButton.title).toEqual('Acl Button');
+    });
+
   });
 
   describe('when is primary', () => {
 
     beforeAll(() => {
-      raisedButton.isPrimary = true;
+      aclButton.type = 'primary';
     });
 
-    it('should have blue background', function() {
-      expect(raisedButton.backgroundColor).toEqualColor('rgb(0,188,212)');
+    it('should have green background', function() {
+      expect(aclButton.backgroundColor).toEqualColor(constants.aclGreen);
+    });
+
+  });
+
+  describe('when is secondary', () => {
+
+    beforeAll(() => {
+      aclButton.type = 'secondary';
+    });
+
+    it('should have purple background', function() {
+      expect(aclButton.backgroundColor).toEqualColor(constants.aclPurple);
     });
 
   });
@@ -37,12 +67,12 @@ describe('raisedButton', function() {
   describe('when clicked', () => {
 
     beforeAll(() => {
-      raisedButton.wasClicked = false;
-      raisedButton.element.click();
+      aclButton.wasClicked = false;
+      aclButton.element.click();
     });
 
     it('should call onClick handler', function() {
-      expect(raisedButton.wasClicked).toEqual(true);
+      expect(aclButton.wasClicked).toEqual(true);
     });
 
   });

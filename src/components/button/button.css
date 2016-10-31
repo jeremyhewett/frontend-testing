@@ -1,0 +1,32 @@
+.acl_button {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    background-color: #f0f0f0;
+    border: none;
+    color: #3f3d3c;
+    box-shadow: 0 3px 0 0 #d7d7d7;
+    display: inline-block;
+    text-align: center;
+    padding: 6px 17px;
+    border-radius: 4px;
+    position: relative;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.acl_button.primary {
+    color: #fff;
+    background-color: #42996d;
+    box-shadow: 0 3px 0 0 #337554;
+}
+
+.acl_button.secondary {
+    color: #fff;
+    background-color: #53529f;
+    box-shadow: 0 3px 0 0 #41417d;
+}
+
+.acl_button:active {
+    box-shadow: none;
+    top: 2px;
+}
