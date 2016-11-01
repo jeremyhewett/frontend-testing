@@ -5,7 +5,7 @@ process.env.NODE_ENV = 'test';
 module.exports = function(config) {
   config.set({
     basePath: '../../',
-    frameworks: ['jasmine'],
+    frameworks: ['jasmine', 'sinon'],
     files: [
       'test/**/*.js'
     ],
@@ -66,6 +66,7 @@ module.exports = function(config) {
     plugins: [
       'karma-webpack',
       'karma-jasmine',
+      'karma-sinon',
       'karma-sourcemap-loader',
       'karma-chrome-launcher'
     ],
