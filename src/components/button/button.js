@@ -23,7 +23,7 @@ export default class Button extends Component {
       className += ' ' + this.props.type
     }
     return (
-	    <button className={className} onClick={this.handleClick.bind(this)} id={this.props.id}>{this.props.title}</button>
+      <button className={className} onClick={this.handleClick.bind(this)} id={this.props.id}>{this.props.title}</button>
     );
   }
   
