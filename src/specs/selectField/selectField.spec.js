@@ -14,25 +14,15 @@
       expect(selectField.element.isVisible()).toEqual(true);
     });
 
-    it('should not display a value', function () {
+    it('should not display a value initially', function () {
       expect(selectField.displayedValue).toEqual('');
     });
 
-    describe('when a value is selected', () => {
-
-      beforeAll(() => {
-        selectField.storedValue = 'null';
-        selectField.selectItem(1);
-      });
-
-      it('should update the displayed value', function () {
-        expect(selectField.displayedValue).toEqual('Yes');
-      });
-
-      it('should call onChange with the new value', function () {
-        expect(selectField.storedValue).toEqual(true);
-      });
-
+    it('should update the displayed value and call the onChange handler when a value is selected', function () {
+      selectField.storedValue = 'null';
+      selectField.selectItem(1);
+      expect(selectField.displayedValue).toEqual('Yes');
+      expect(selectField.storedValue).toEqual(true);
     });
 
   });

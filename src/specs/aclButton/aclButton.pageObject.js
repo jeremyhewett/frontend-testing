@@ -13,7 +13,6 @@ class AclButton {
   set title(value) {
     browser.execute(`window.aclButton.title = '${value}'`);
     browser.execute(`window.aclButton.refresh()`);
-    browser.pause(500);
   }
 
   get wasClicked() {

@@ -8,23 +8,16 @@ class TestAclButton extends Component {
     super(props, context);
 
     window.aclButton = {
-      title: 'Test Me!!',
-      wasClicked: false,
-      type: undefined,
-      isTiny: false,
+      title: 'Test Me!',
       refresh: () => this.forceUpdate()
     };
-
-    this.onClick = this.onClick.bind(this);
   }
-
-  onClick = () => window.aclButton.wasClicked = true;
 
   render() {
     return (
       <AclButton
         title={window.aclButton.title}
-        onClick={this.onClick}
+        onClick={() => window.aclButton.wasClicked = true}
         type={window.aclButton.type}
         tiny={window.aclButton.isTiny}
         id="test-acl-button"/>
