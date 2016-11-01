@@ -3,11 +3,11 @@ var seleniumServer;
 
 exports.config = {
   specs: [
-    './specs/**/*.spec.js'
+    './specs/all.spec.js'
   ],
   capabilities: [{
     browserName: 'chrome',
-    maxInstances: 2
+    maxInstances: 1
   }],
   coloredLogs: true,
   baseUrl: 'http://localhost:3000',
