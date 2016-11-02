@@ -7,6 +7,7 @@ export default class Button extends Component {
     onClick: React.PropTypes.func,
     type: React.PropTypes.string,
     tiny: React.PropTypes.bool,
+    disabled: React.PropTypes.bool,
     id: React.PropTypes.string
   };
 
@@ -23,7 +24,13 @@ export default class Button extends Component {
       className += ' ' + this.props.type
     }
     return (
-      <button className={className} onClick={this.handleClick.bind(this)} id={this.props.id}>{this.props.title}</button>
+      <button
+        disabled={this.props.disabled}
+        className={className}
+        onClick={this.handleClick.bind(this)}
+        id={this.props.id}>
+        {this.props.title}
+      </button>
     );
   }
   

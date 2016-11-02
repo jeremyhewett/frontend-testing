@@ -68,7 +68,8 @@ module.exports = function(config) {
       'karma-jasmine',
       'karma-sinon',
       'karma-sourcemap-loader',
-      'karma-chrome-launcher'
+      'karma-chrome-launcher',
+      'karma-firefox-launcher'
     ],
 
 
@@ -77,7 +78,7 @@ module.exports = function(config) {
     colors: true,
     logLevel: config.LOG_INFO,
     autoWatch: true,
-    browsers: ['Chrome'],
+    browsers: ['Chrome', 'Firefox'],
     singleRun: false
   })
 };

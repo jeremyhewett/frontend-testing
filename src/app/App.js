@@ -8,6 +8,7 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
 import TestAclButton from './testAclButton';
 import TestSelectField from './testSelectField';
+import TestSidePanel from './testSidePanel';
 
 class App extends Component {
 
@@ -26,6 +27,10 @@ class App extends Component {
           <div style={{marginTop: '100px'}}>
             <h4>Select Field</h4>
             <TestSelectField/>
+          </div>
+          <div style={{marginTop: '100px'}}>
+            <h4>Side Panel</h4>
+            <TestSidePanel/>
           </div>
         </div>
       </MuiThemeProvider>

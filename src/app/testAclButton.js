@@ -8,7 +8,6 @@ class TestAclButton extends Component {
     super(props, context);
 
     window.aclButton = {
-      title: 'Test Me!',
       refresh: () => this.forceUpdate()
     };
   }
@@ -19,7 +18,8 @@ class TestAclButton extends Component {
         title={window.aclButton.title}
         onClick={() => window.aclButton.wasClicked = true}
         type={window.aclButton.type}
-        tiny={window.aclButton.isTiny}
+        tiny={window.aclButton.tiny}
+        disabled={window.aclButton.disabled}
         id="test-acl-button"/>
     );
   }

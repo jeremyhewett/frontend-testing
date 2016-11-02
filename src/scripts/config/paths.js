@@ -49,12 +49,14 @@ module.exports = {
 };
 
 // @remove-on-eject-begin
+/*
 function resolveOwn(relativePath) {
   return path.resolve(__dirname, relativePath);
 }
+*/
 
 // config before eject: we're in ./node_modules/react-scripts/config/
-module.exports = {
+/*module.exports = {
   appBuild: resolveApp('build'),
   appPublic: resolveApp('public'),
   appHtml: resolveApp('public/index.html'),
@@ -65,7 +67,7 @@ module.exports = {
   // this is empty with npm3 but node resolution searches higher anyway:
   ownNodeModules: resolveOwn('../node_modules'),
   nodePaths: nodePaths
-};
+};*/
 // @remove-on-eject-end
 
 // config before publish: we're in ./packages/react-scripts/config/

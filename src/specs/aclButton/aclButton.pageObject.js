@@ -15,6 +15,11 @@ class AclButton {
     browser.execute(`window.aclButton.refresh()`);
   }
 
+  set disabled(value) {
+    browser.execute(`window.aclButton.disabled = ${value}`);
+    browser.execute(`window.aclButton.refresh()`);
+  }
+
   get wasClicked() {
     return browser.execute(`return window.aclButton.wasClicked`).value;
   }
