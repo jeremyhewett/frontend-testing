@@ -10,8 +10,8 @@
     "enzyme": "node ./node_modules/karma/bin/karma start ./scripts/config/karma.conf.js --single-run"
   },
   "devDependencies": {
-    "acl-ui": "https://github.com/acl-services/acl-ui-dist.git#v3.0.1",
     "acl-icon-font": "https://github.com/acl-services/acl-icon-font",
+    "acl-ui": "https://github.com/acl-services/acl-ui-dist.git#v3.0.1",
     "autoprefixer": "v6.5.1",
     "babel-core": "v6.18.0",
     "babel-eslint": "v7.0.0",
@@ -42,6 +42,7 @@
     "karma-sinon": "^1.0.5",
     "karma-sourcemap-loader": "^0.3.7",
     "karma-webpack": "^1.8.0",
+    "lodash": "^4.16.6",
     "material-ui": "v0.16.1",
     "node-sass": "^3.10.1",
     "object-assign": "v4.1.0",

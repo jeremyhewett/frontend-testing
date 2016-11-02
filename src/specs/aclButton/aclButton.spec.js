@@ -1,7 +1,6 @@
 (function() {
   'use strict';
 
-  let App = require('./app.pageObject');
   let customMatchers = require('./customMatchers');
   let constants = require('./constants');
 
@@ -14,7 +13,7 @@
     });
 
     beforeEach(() => {
-      App.load();
+      aclButton.load();
     });
 
     it('should be visible', () => {

@@ -2,6 +2,10 @@
 
 class SelectField {
 
+  load(){
+    browser.url('/SelectField');
+  }
+
   get element() {
     return browser.element('#test-select-field');
   }

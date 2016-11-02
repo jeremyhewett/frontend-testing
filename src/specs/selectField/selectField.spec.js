@@ -1,13 +1,12 @@
 (function() {
   'use strict';
 
-  let App = require('./app.pageObject');
   let selectField = require('./selectField/selectField.pageObject');
 
   describe('selectField', function () {
 
     beforeEach(() => {
-      App.load();
+      selectField.load();
     });
 
     it('should be visible', function () {

@@ -1,7 +1,13 @@
 import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
 
 import SelectField from 'material-ui/SelectField';
 import MenuItem from 'material-ui/MenuItem';
+
+import injectTapEventPlugin from 'react-tap-event-plugin';
+injectTapEventPlugin();
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+
 
 class TestSelectField extends Component {
 
@@ -26,15 +32,17 @@ class TestSelectField extends Component {
 
   render() {
     return (
-      <SelectField value={window.selectField.value} onChange={this.handleChange} id="test-select-field">
-        {
-          window.selectField.options.map(function(option, i) {
-            return <MenuItem value={option.value} primaryText={option.label} key={i}/>;
-          })
-        }
-      </SelectField>
+      <MuiThemeProvider>
+        <SelectField value={window.selectField.value} onChange={this.handleChange} id="test-select-field">
+          {
+            window.selectField.options.map(function(option, i) {
+              return <MenuItem value={option.value} primaryText={option.label} key={i}/>;
+            })
+          }
+        </SelectField>
+      </MuiThemeProvider>
     );
   }
 }
 
-export default TestSelectField;
+ReactDOM.render(<TestSelectField/>, document.getElementById('root'));

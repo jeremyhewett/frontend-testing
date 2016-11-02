@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
 
-import AclButton from '../components/button/button';
+import AclButton from '../components/AclButton';
 
 class TestAclButton extends Component {
 
@@ -25,4 +26,4 @@ class TestAclButton extends Component {
   }
 }
 
-export default TestAclButton;
+ReactDOM.render(<TestAclButton/>, document.getElementById('root'));

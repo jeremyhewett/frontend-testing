@@ -2,6 +2,10 @@
 
 class SidePanel {
 
+  load(){
+    browser.url('/SidePanel');
+  }
+
   get element() {
     return browser.element('.acl-panel');
   }

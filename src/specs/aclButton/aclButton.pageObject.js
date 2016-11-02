@@ -2,6 +2,10 @@
 
 class AclButton {
 
+  load(){
+    browser.url('/AclButton');
+  }
+
   get element() {
     return browser.element('#test-acl-button');
   }

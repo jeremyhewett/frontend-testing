@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow, mount, render } from 'enzyme';
-import AclButton from '../components/button/button';
+import AclButton from '../components/AclButton';
 
 describe("Acl Button", function() {
 

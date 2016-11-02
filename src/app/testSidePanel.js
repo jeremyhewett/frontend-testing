@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
 
+import 'acl-ui/core/all.scss';
+import 'acl-icon-font/dist/css/main.scss';
 import SidePanel from '../components/SidePanel';
 
 class TestSidePanel extends Component {
@@ -29,4 +32,4 @@ class TestSidePanel extends Component {
   }
 }
 
-export default TestSidePanel;
+ReactDOM.render(<TestSidePanel/>, document.getElementById('root'));

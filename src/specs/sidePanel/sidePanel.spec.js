@@ -1,13 +1,12 @@
 (function() {
   'use strict';
 
-  let App = require('./app.pageObject');
   let sidePanel = require('./sidePanel/sidePanel.pageObject');
 
   describe('sidePanel', function () {
 
     beforeEach(() => {
-      App.load();
+      sidePanel.load();
     });
 
     it('should not be visible initially', function () {
