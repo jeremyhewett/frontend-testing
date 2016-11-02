@@ -6,7 +6,7 @@
 
   describe('selectField', function () {
 
-    beforeAll(() => {
+    beforeEach(() => {
       App.load();
     });
 

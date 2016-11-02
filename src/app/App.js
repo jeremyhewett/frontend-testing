@@ -20,7 +20,7 @@ class App extends Component {
         <div className="App">
           <div className="App-header" style={{marginBottom: '100px'}}>
             <img src={logo} className="App-logo" alt="logo" />
-            <h2 id="heading">React Components</h2>
+            <h2 id="heading">Component Testing</h2>
           </div>
           <div className="App-body">
             <div>

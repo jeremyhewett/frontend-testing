@@ -11,6 +11,9 @@
 
     beforeAll(() => {
       jasmine.addMatchers(customMatchers);
+    });
+
+    beforeEach(() => {
       App.load();
     });
 
@@ -46,7 +49,7 @@
 
     describe('when disabled', () => {
 
-      beforeAll(() => {
+      beforeEach(() => {
         aclButton.disabled = true;
       });
 
@@ -54,10 +57,6 @@
         aclButton.wasClicked = false;
         aclButton.element.click();
         expect(aclButton.wasClicked).toEqual(false);
-      });
-
-      afterAll(() => {
-        aclButton.disabled = false;
       });
 
     });

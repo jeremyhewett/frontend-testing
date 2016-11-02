@@ -42,6 +42,12 @@ module.exports = function(config) {
             }
           },
           {
+            // Extract css files in production builds
+            // Reference: https://github.com/webpack/extract-text-webpack-plugin
+            test: /\.scss$/,
+            loaders: ['style', 'css', 'sass']
+          },
+          {
             test: /\.css$/,
             loader: 'style!css?importLoaders=1!postcss'
           },

@@ -5,7 +5,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = undefined;
 
-require('acl-ui/more/css/_side-panel.scss');
+require('./_side-panel.scss');
 
 var _SidePanel = require('./SidePanel');
 

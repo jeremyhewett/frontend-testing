@@ -8,27 +8,23 @@ class TestSidePanel extends Component {
     super(props, context);
 
     window.sidePanel = {
+      open: () => this.refs.panel.open(),
+      close: () => this.refs.panel.close(),
       refresh: () => this.forceUpdate()
     };
 
   }
 
-  openPanel() {
-    this.refs.panel.open();
-  }
-
   render() {
     return (
-      <div>
-        <button onClick={this.openPanel.bind(this)}>Open SidePanel</button>
-        <SidePanel ref="panel" title="ACL UI is Awesome">
-          <h1>Objectives:</h1>
-          <ul>
-            <li>Happy customers</li>
-            <li>Profit</li>
-          </ul>
-        </SidePanel>
-      </div>
+      <SidePanel
+        ref="panel"
+        title="ACL UI is Awesome"
+        onOpen={() => window.sidePanel.onOpenFired = true}
+        onClose={() => window.sidePanel.onCloseFired = true}
+        id="test-side-panel">
+        <h1>Side Panel Content</h1>
+      </SidePanel>
     );
   }
 }
