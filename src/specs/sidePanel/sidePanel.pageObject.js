@@ -5,9 +5,7 @@ let constants = require('../constants');
 class SidePanel {
 
   load() {
-    browser.url('/');
-    browser.click('=SidePanel');
-    browser.click('=Test SidePanel');
+    browser.url('/?selectedKind=SidePanel&selectedStory=Test%20SidePanel');
     browser.frame(constants.iframe);
   }
 

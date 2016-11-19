@@ -5,9 +5,7 @@ let constants = require('../constants');
 class AclButton {
 
   load() {
-    browser.url('/');
-    browser.click('=AclButton');
-    browser.click('=Test AclButton');
+    browser.url('/?selectedKind=AclButton&selectedStory=Test%20AclButton');
     browser.frame(constants.iframe);
   }
 

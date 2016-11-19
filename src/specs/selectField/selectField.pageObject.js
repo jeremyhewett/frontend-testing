@@ -5,9 +5,7 @@ let constants = require('../constants');
 class SelectField {
 
   load(){
-    browser.url('/');
-    browser.click('=SelectField');
-    browser.click('=Test SelectField');
+    browser.url('/?selectedKind=SelectField&selectedStory=Test%20SelectField');
     browser.frame(constants.iframe);
   }
 
@@ -29,6 +27,7 @@ class SelectField {
 
   selectItem(index) {
     this.element.click();
+    browser.pause(100);
     browser.element(`//BODY/DIV[3]/DIV/DIV/DIV/DIV[${index + 1}]/SPAN`).click();
   }
 
