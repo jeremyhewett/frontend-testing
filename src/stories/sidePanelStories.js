@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
+import { storiesOf, action } from '@kadira/storybook';
 
 import 'acl-ui/core/all.scss';
 import 'acl-icon-font/dist/css/main.scss';
 import SidePanel from '../components/SidePanel';
 
-class TestSidePanel extends Component {
+class Wrapper extends Component {
 
   constructor(props, context) {
     super(props, context);
@@ -32,4 +32,4 @@ class TestSidePanel extends Component {
   }
 }
 
-ReactDOM.render(<TestSidePanel/>, document.getElementById('root'));
+storiesOf('SidePanel', module).add('Test SidePanel', () => (<Wrapper></Wrapper>));

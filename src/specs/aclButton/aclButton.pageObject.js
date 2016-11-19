@@ -6,6 +6,7 @@ class AclButton {
 
   load() {
     browser.url('/');
+    browser.click('=AclButton');
     browser.click('=Test AclButton');
     browser.frame(constants.iframe);
   }

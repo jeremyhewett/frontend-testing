@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
-
+import { storiesOf, action } from '@kadira/storybook';
 import SelectField from 'material-ui/SelectField';
 import MenuItem from 'material-ui/MenuItem';
 
@@ -9,7 +8,7 @@ injectTapEventPlugin();
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
 
-class TestSelectField extends Component {
+class Wrapper extends Component {
 
   constructor(props, context) {
     super(props, context);
@@ -45,4 +44,4 @@ class TestSelectField extends Component {
   }
 }
 
-ReactDOM.render(<TestSelectField/>, document.getElementById('root'));
+storiesOf('SelectField', module).add('Test SelectField', () => (<Wrapper></Wrapper>));

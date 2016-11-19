@@ -1,8 +1,9 @@
 import { configure } from '@kadira/storybook';
 
 function loadStories() {
-  require('../../../stories/stories.js');
-  // You can require as many stories as you need.
+  require('../../../stories/aclButtonStories.js');
+  require('../../../stories/sidePanelStories.js');
+  require('../../../stories/selectFieldStories.js');
 }
 
 configure(loadStories, module);

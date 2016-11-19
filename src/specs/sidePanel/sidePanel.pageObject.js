@@ -1,9 +1,14 @@
 'use strict';
 
+let constants = require('../constants');
+
 class SidePanel {
 
-  load(){
-    browser.url('/SidePanel');
+  load() {
+    browser.url('/');
+    browser.click('=SidePanel');
+    browser.click('=Test SidePanel');
+    browser.frame(constants.iframe);
   }
 
   get element() {
