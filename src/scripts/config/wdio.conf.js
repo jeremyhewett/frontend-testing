@@ -10,7 +10,7 @@ exports.config = {
     maxInstances: 1
   }],
   coloredLogs: true,
-  baseUrl: 'http://localhost:3000',
+  baseUrl: 'http://localhost:9001',
   waitforTimeout: 5000,
   framework: 'jasmine',
   reporters: ['dot'],

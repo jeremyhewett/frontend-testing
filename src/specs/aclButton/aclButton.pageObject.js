@@ -1,9 +1,13 @@
 'use strict';
 
+let constants = require('../constants');
+
 class AclButton {
 
-  load(){
-    browser.url('/AclButton');
+  load() {
+    browser.url('/');
+    browser.click('=Test AclButton');
+    browser.frame(constants.iframe);
   }
 
   get element() {
@@ -33,7 +37,7 @@ class AclButton {
   }
 
   get backgroundColor() {
-    return this.element.getCssProperty('background-color').value;
+    return this.element.getCssProperty('background-color');
   }
 
   set type(type) {

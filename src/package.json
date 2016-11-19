@@ -7,9 +7,11 @@
     "start": "node ./scripts/start",
     "pretest": "gulp --gulpfile ./scripts/gulpfile.js concat-specs",
     "test": "./node_modules/.bin/wdio scripts/config/wdio.conf.js",
-    "enzyme": "node ./node_modules/karma/bin/karma start ./scripts/config/karma.conf.js --single-run"
+    "enzyme": "node ./node_modules/karma/bin/karma start ./scripts/config/karma.conf.js --single-run",
+    "storybook": "start-storybook -p 9001 -c ./scripts/config/storybook"
   },
   "devDependencies": {
+    "@kadira/storybook": "^2.30.1",
     "acl-icon-font": "https://github.com/acl-services/acl-icon-font",
     "acl-ui": "https://github.com/acl-services/acl-ui-dist.git#v3.0.1",
     "autoprefixer": "v6.5.1",

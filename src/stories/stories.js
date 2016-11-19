@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
-
+import { storiesOf, action } from '@kadira/storybook';
 import AclButton from '../components/AclButton';
 
-class TestAclButton extends Component {
+class Wrapper extends Component {
 
   constructor(props, context) {
     super(props, context);
@@ -27,4 +26,4 @@ class TestAclButton extends Component {
   }
 }
 
-ReactDOM.render(<TestAclButton/>, document.getElementById('root'));
+storiesOf('AclButton', module).add('Test AclButton', () => (<Wrapper></Wrapper>));

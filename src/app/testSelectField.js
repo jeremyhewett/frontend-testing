@@ -27,7 +27,7 @@ class TestSelectField extends Component {
 
   handleChange = (event, index, value) => {
     window.selectField.value = value;
-    this.setState({value});
+    this.forceUpdate();
   };
 
   render() {
